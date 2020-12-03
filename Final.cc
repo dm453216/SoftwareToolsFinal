@@ -20,3 +20,14 @@ int countChar(string in){
   return charCount;
   }
 
+int countLine(string in){
+  int lineCount = 1;
+  for(int i = 0; i <in.size(); i++){
+    if(in[i] == '\n'){
+        lineCount++;
+    }
+  }
+  cout << " There are " << lineCount << " Lines" << endl;
+  return lineCount;
+}
+

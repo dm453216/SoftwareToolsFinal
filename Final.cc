@@ -33,12 +33,28 @@ int countLine(string in){
 
 int main (int argc, char **argv)
 {
-  int i;
+
 
   if (argc < 2) {
   string name = "Ohio University";
-  cout << name << endl;
+  string name2 = "Athens";
   countLine(name);
-  countChar(name);
+  countChar(name2);
   }
+string line;
+string fileName;
+fileName = argv[1];
+fileName += ".txt";
+ifstream myfile (fileName);
+if (myfile.is_open()) {
+    while ( getline (myfile,line) ) {
+        countLine(line);
+        countChar(line);
+    }
+myfile.close();
 }
+else cout << "Unable to open file";
+
+  return 0;
+}
+

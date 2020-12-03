@@ -6,6 +6,12 @@
 
 using namespace std;
 
+/*!
+* @brief this function counts the num of characters in a string
+*
+* @param[in] string gets passed into
+*@param[out] int value of num of chars is returned
+*/
 int countChar(string in){
   int charCount = 0;
   for(int i = 0; i <in.size(); i++){
@@ -19,6 +25,13 @@ int countChar(string in){
   cout << " There are " << charCount << " characters" << endl;
   return charCount;
   }
+
+/*!
+  * @brief this function counts the num of lines in a string
+  *
+  * @param[in] string gets passed into
+  *@param[out] int value of num of lines is returned
+  */
 
 int countLine(string in){
   int lineCount = 1;
@@ -41,6 +54,12 @@ int main (int argc, char **argv)
   countLine(name);
   countChar(name2);
   }
+/*!
+  * In Main, if no command line arguments passed in then we call CountLine with "Ohio Univesity"
+  * and countChar with "Athens". If on argument, we open the file named form the command line and then call
+  * countLine and countChar with a pointer to the files contents in memory
+  *
+  */
 string line;
 string fileName;
 fileName = argv[1];

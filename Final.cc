@@ -31,3 +31,14 @@ int countLine(string in){
   return lineCount;
 }
 
+int main (int argc, char **argv)
+{
+  int i;
+
+  if (argc < 2) {
+  string name = "Ohio University";
+  cout << name << endl;
+  countLine(name);
+  countChar(name);
+  }
+}
